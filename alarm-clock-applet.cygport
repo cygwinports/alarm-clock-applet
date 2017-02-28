@@ -1,0 +1,16 @@
+inherit gnome2
+
+NAME="alarm-clock-applet"
+VERSION=0.3.4
+RELEASE=1
+CATEGORY="Utils"
+SUMMARY="Alarm clock tray applet"
+DESCRIPTION="Alarm Clock is a fully-featured alarm clock for your panel.
+It's easy to use yet powerful with support for multiple repeatable alarms,
+as well as snoozing and a flexible notification system."
+HOMEPAGE="http://alarm-clock.pseudoberries.com/"
+SRC_URI="http://launchpad.net/alarm-clock/trunk/${VERSION}/+download/${NAME}-${VERSION}.tar.gz"
+# avoid dependency on gnome-control-center
+PATCH_URI="0.3.4-sounds-freedesktop.patch"
+
+REQUIRES="gstreamer1.0-plugins-base sound-theme-freedesktop"

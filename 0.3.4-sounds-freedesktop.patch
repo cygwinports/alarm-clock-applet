@@ -1,0 +1,15 @@
+--- origsrc/alarm-clock-applet-0.3.4/src/alarm-applet.c	2012-03-18 10:24:42.000000000 -0500
++++ src/alarm-clock-applet-0.3.4/src/alarm-applet.c	2016-12-06 22:25:16.506282000 -0600
+@@ -172,10 +172,10 @@ alarm_applet_sounds_load (AlarmApplet *a
+ 	if (applet->sounds != NULL)
+ 		alarm_list_entry_list_free (&(applet->sounds));
+ 
+-	// Locate gnome sounds
++	// Locate sounds
+ 	sysdirs = g_get_system_data_dirs ();
+ 	for (i = 0; !sounds_dir && sysdirs[i] != NULL; i++) {
+-		tmp = g_build_filename(sysdirs[i], "sounds/gnome/default/alerts", NULL);
++		tmp = g_build_filename(sysdirs[i], "sounds/freedesktop/stereo", NULL);
+ 		if (g_file_test (tmp, G_FILE_TEST_IS_DIR)) {
+ 			// Load stock sounds
+ 			g_debug ("AlarmApplet: sounds_load: Found %s!", tmp);
