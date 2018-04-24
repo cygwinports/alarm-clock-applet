@@ -2,7 +2,7 @@ inherit gnome2
 
 NAME="alarm-clock-applet"
 VERSION=0.3.4
-RELEASE=1
+RELEASE=2
 CATEGORY="Utils"
 SUMMARY="Alarm clock tray applet"
 DESCRIPTION="Alarm Clock is a fully-featured alarm clock for your panel.
